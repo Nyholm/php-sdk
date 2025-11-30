@@ -97,7 +97,7 @@ class Discoverer
             }
 
             $finder->files()
-                ->in($absolutePaths)
+                ->in(array_unique($absolutePaths))
                 ->exclude($excludeDirs)
                 ->name('*.php');
 
